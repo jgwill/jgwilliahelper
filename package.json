@@ -23,11 +23,11 @@
     "commands": [
       {
         "command": "jgwilliahelper.jgwilliahelper",
-        "title": "OpenAI Code Helper"
+        "title": "JGWillIA helper"
       },
       {
         "command": "jgwilliahelper.openaisearchselection",
-        "title": "OpenAI Code Helper Search Selection"
+        "title": "JGWillIA helper Search Selection"
       }
     ],
     "menus": {
