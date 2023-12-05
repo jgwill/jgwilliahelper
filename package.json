@@ -17,6 +17,10 @@
   "categories": [
     "Other",
     "Programming Languages"
+  ],  
+  "activationEvents": [
+    "onCommand:jgwilliahelper.jgwilliahelper",
+    "onCommand:jgwilliahelper.openaisearchselection"
   ],
   "main": "./extension.js",
   "contributes": {
