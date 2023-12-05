@@ -1,9 +1,9 @@
 {
-  "name": "openaicodehelper",
-  "displayName": "ChatGPT(OpenAI) Code Helper",
-  "description": "Simple Open AI Helper to ask and help for your code",
+  "name": "jgwilliahelper",
+  "displayName": "JGWill ChatGPT(OpenAI) Helper",
+  "description": "JGWill redist Simple Open AI Helper to ask and help for your code",
   "version": "0.1.3",
-  "publisher": "IvanGrigorov",
+  "publisher": "jgwill",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.73.0"
@@ -19,18 +19,18 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "onCommand:openaicodehelper.openaicodehelper",
-    "onCommand:openaicodehelper.openaisearchselection"
+    "onCommand:jgwilliahelper.jgwilliahelper",
+    "onCommand:jgwilliahelper.openaisearchselection"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "openaicodehelper.openaicodehelper",
+        "command": "jgwilliahelper.jgwilliahelper",
         "title": "OpenAI Code Helper"
       },
       {
-        "command": "openaicodehelper.openaisearchselection",
+        "command": "jgwilliahelper.openaisearchselection",
         "title": "OpenAI Code Helper Search Selection"
       }
     ],
@@ -38,14 +38,14 @@
       "editor/context": [
         {
           "when": "editorHasSelection",
-          "command": "openaicodehelper.openaisearchselection"
+          "command": "jgwilliahelper.openaisearchselection"
         }
       ]
     },
     "configuration": {
-      "title": "Open AI code helper",
+      "title": "JGWill Open AI helper",
       "properties": {
-        "openaicodehelper.apikey": {
+        "jgwilliahelper.apikey": {
           "type": "string",
           "default": "",
           "description": "Provide your Api Key for the Open AI."
@@ -75,6 +75,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IvanGrigorov/Open-AI-Code-Helper"
+    "url": "https://github.com/jgwill/jgwilliahelper"
   }
 }

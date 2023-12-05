@@ -10,7 +10,7 @@ var MarkdownIt = require('markdown-it');
 function activate(context) {
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "openaicodehelper" is now active!');
+	console.log('Congratulations, your extension "jgwilliahelper" is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
@@ -25,7 +25,7 @@ function activate(context) {
 
 
 function generateHelperCommand() {
-	let disposable = vscode.commands.registerCommand('openaicodehelper.openaicodehelper', () => {
+	let disposable = vscode.commands.registerCommand('jgwilliahelper.jgwilliahelper', () => {
 		vscode.window.showInputBox({
 			placeHolder: "Write your search text"
 		}).then((input) => {
@@ -36,7 +36,7 @@ function generateHelperCommand() {
 }
 
 function generateOnSelectionHelperCommand() {
-	let disposable = vscode.commands.registerCommand('openaicodehelper.openaisearchselection', () => {
+	let disposable = vscode.commands.registerCommand('jgwilliahelper.openaisearchselection', () => {
 		const input = vscode.window.activeTextEditor.selection
 		search(vscode.window.activeTextEditor.document.getText(input));
 	});
@@ -45,7 +45,7 @@ function generateOnSelectionHelperCommand() {
 
 
 function search(input) {
-	const config = vscode.workspace.getConfiguration('openaicodehelper');
+	const config = vscode.workspace.getConfiguration('jgwilliahelper');
 	if (!validate(config)) return;
 	if (input) {
 		let disposableStatusMessage = vscode.window.setStatusBarMessage("Loading result...");
