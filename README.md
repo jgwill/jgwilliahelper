@@ -1,4 +1,4 @@
-# OpenAI Code helper
+# JGWill OpenAI helper
 
 Generates code by query string with the help of OpenAI API.
 Open AI account is required for an API Key
