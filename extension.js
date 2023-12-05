@@ -72,11 +72,13 @@ function generateOpenAI(config) {
 }
 
 function genereateResponse(input, openAI, disposableStatusMessage) {
+
+	var modelname = "text-davinci-003";
 	openAI.createCompletion({
-		model: "text-davinci-003",
+		model: modelname,
 		prompt: input,
 		temperature: 0.7,
-		max_tokens: 256,
+		max_tokens: 4096,
 		top_p: 1,
 		frequency_penalty: 0,
 		presence_penalty: 0,
