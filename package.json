@@ -2,7 +2,7 @@
   "name": "jgwilliahelper",
   "displayName": "JGWill ChatGPT(OpenAI) Helper",
   "description": "JGWill redist Simple Open AI Helper to ask and help for your code",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "publisher": "jgwill",
   "icon": "images/icon.png",
   "engines": {
