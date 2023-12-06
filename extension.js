@@ -79,7 +79,7 @@ function genereateResponse(input, openAI, disposableStatusMessage) {
 		model: modelname,
 		prompt: input,
 		temperature: 0.7,
-		max_tokens: 4094,
+		max_tokens: 1024,
 		top_p: 1,
 		frequency_penalty: 0,
 		presence_penalty: 0,
