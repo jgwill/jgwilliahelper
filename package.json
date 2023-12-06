@@ -56,7 +56,8 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "test": "node ./test/runTest.js",
+    "publish":"npm version patch && vsce publish"
   },
   "devDependencies": {
     "@types/glob": "^8.0.0",
