@@ -73,8 +73,8 @@ function generateOpenAI(config) {
 
 function genereateResponse(input, openAI, disposableStatusMessage) {
 
-	var modelname = "gpt-4";
-	// var modelname = "text-davinci-003";
+	//var modelname = "gpt-4";
+	var modelname = "text-davinci-003";
 	openAI.createCompletion({
 		model: modelname,
 		prompt: input,
