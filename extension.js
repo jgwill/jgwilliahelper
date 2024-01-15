@@ -74,6 +74,12 @@ function generateOpenAI(config) {
 function genereateResponse(input, openAI, disposableStatusMessage) {
 
 	var modelname = "gpt-4-32k"; //gpt-4-1106-preview  (128k)
+
+	//If environment variable is set 'JGWILLHELPER_MODEL', use it
+	if (process.env.JGWILLHELPER_MODEL) {
+		modelname = process.env.JGWILLHELPER_MODEL;
+	}
+
 	// var modelname = "text-davinci-003";
 	openAI.createCompletion({
 		model: modelname,
