@@ -5,8 +5,10 @@ var openAI = require('openai');
 var MarkdownIt = require('markdown-it');
 const dotenv = require('dotenv');
 const path = require('path');
-import { OpenAI } from 'openai';
 var engine = "davinci-002";
+
+//const openAI = await import("openai");
+const OpenAI = openAI.OpenAI;
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
