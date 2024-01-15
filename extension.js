@@ -6,7 +6,7 @@ var MarkdownIt = require('markdown-it');
 const dotenv = require('dotenv');
 const path = require('path');
 import { OpenAI } from 'openai';
-
+var engine = "davinci-002";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -71,7 +71,8 @@ function generateOpenAI(config) {
 	// const configuration = new OpenAI({
 	// 	apiKey: config.apikey,
 	// });
-	const openai = new OpenAI({ apiKey: config.apikey};
+	engine = config.engine; //define the engine globally from the settings
+	const openai = new OpenAI({ apiKey: config.apikey});
 	return openai;
 }
 
@@ -80,7 +81,8 @@ function genereateResponse(input, openAI, disposableStatusMessage) {
 	const envPath = path.join(process.env.HOME, '.env');
 	dotenv.config({ path: envPath });
 
-	let modelname = "davinci-002"; //gpt-4-1106-preview  (128k)
+	let modelname = engine; //gpt-4-1106-preview  (128k)
+	
 //davinci-002
 	// Check if JGWILLHELPER_MODEL variable exists in .env
 	if (process.env.JGWILLHELPER_MODEL) {
