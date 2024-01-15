@@ -3,6 +3,8 @@
 var vscode = require('vscode');
 var openAI = require('openai');
 var MarkdownIt = require('markdown-it');
+const dotenv = require('dotenv');
+const path = require('path');
 
 
 // This method is called when your extension is activated
@@ -72,20 +74,24 @@ function generateOpenAI(config) {
 }
 
 function genereateResponse(input, openAI, disposableStatusMessage) {
+	// Load .env file from $HOME
+	const envPath = path.join(process.env.HOME, '.env');
+	dotenv.config({ path: envPath });
 
-	var modelname = "gpt-4-32k"; //gpt-4-1106-preview  (128k)
-
-	//If environment variable is set 'JGWILLHELPER_MODEL', use it
+	let modelname = "davinci-002"; //gpt-4-1106-preview  (128k)
+//davinci-002
+	// Check if JGWILLHELPER_MODEL variable exists in .env
 	if (process.env.JGWILLHELPER_MODEL) {
 		modelname = process.env.JGWILLHELPER_MODEL;
 	}
 
+	// Rest of the code...
 	// var modelname = "text-davinci-003";
 	openAI.createCompletion({
 		model: modelname,
 		prompt: input,
 		temperature: 0.3,
-		max_tokens: 8096,
+		max_tokens: 4096,
 		top_p: 1,
 		frequency_penalty: 0,
 		presence_penalty: 0,
