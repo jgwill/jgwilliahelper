@@ -7,6 +7,10 @@ Open AI account is required for an API Key
 
 ## Updates 
 
+### version 0.2.0 
+
+Attempt to upgrade OpenAI which has (it seems) deprecated its old api
+
 ### version 0.1.0
 
 Now you can search on selected text from the context menu
