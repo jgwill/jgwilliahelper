@@ -54,7 +54,7 @@
           "type": "string",
           "default": "davinci",
           "description": "Provide your Engine for the Open AI."
-        },
+        }
       }
     }
   },
