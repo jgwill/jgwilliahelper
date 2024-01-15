@@ -73,13 +73,13 @@ function generateOpenAI(config) {
 
 function genereateResponse(input, openAI, disposableStatusMessage) {
 
-	var modelname = "gpt-3.5-turbo-1106";
+	var modelname = "gpt-4-32k"; //gpt-4-1106-preview  (128k)
 	// var modelname = "text-davinci-003";
 	openAI.createCompletion({
 		model: modelname,
 		prompt: input,
-		temperature: 0.7,
-		max_tokens: 4094,
+		temperature: 0.3,
+		max_tokens: 8096,
 		top_p: 1,
 		frequency_penalty: 0,
 		presence_penalty: 0,
