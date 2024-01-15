@@ -49,7 +49,12 @@
           "type": "string",
           "default": "",
           "description": "Provide your Api Key for the Open AI."
-        }
+        },
+        "jgwilliahelper.engine": {
+          "type": "string",
+          "default": "davinci",
+          "description": "Provide your Engine for the Open AI."
+        },
       }
     }
   },
@@ -72,7 +77,7 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "markdown-it": "^13.0.1",
-    "openai": "^3.1.0"
+    "openai": "^4.24.7"
   },
   "repository": {
     "type": "git",

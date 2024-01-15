@@ -5,6 +5,7 @@ var openAI = require('openai');
 var MarkdownIt = require('markdown-it');
 const dotenv = require('dotenv');
 const path = require('path');
+import { OpenAI } from 'openai';
 
 
 // This method is called when your extension is activated
@@ -51,6 +52,7 @@ function search(input) {
 	if (!validate(config)) return;
 	if (input) {
 		let disposableStatusMessage = vscode.window.setStatusBarMessage("Loading result...");
+		// let disposableStatusMessage = vscode.window.setStatusBarMessaConfigurationge("Loading result...");
 		//test.dispose()
 		const openai = generateOpenAI(config);
 		genereateResponse(input, openai, disposableStatusMessage);
@@ -66,10 +68,10 @@ function validate(config) {
 }
 
 function generateOpenAI(config) {
-	const configuration = new openAI.Configuration({
-		apiKey: config.apikey,
-	});
-	const openai = new openAI.OpenAIApi(configuration);
+	// const configuration = new OpenAI({
+	// 	apiKey: config.apikey,
+	// });
+	const openai = new OpenAI({ apiKey: config.apikey};
 	return openai;
 }
 
